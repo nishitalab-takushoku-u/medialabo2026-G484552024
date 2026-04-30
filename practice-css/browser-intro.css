@@ -1,27 +1,50 @@
+p.info {
+  background-color: #dfdfdf;
+}
+p.info {
+  font-size:small;
+}
 p {
-	color: navy;
+    color: navy;
 }
 
 p.info {
-	font-size: 10pt;
+    font-size: 10pt;
 }
-
-h1 {
-	background-color: #7f7fcf;
+h1{
+  text-shadow:
+    1px 1px 20px white,
+    0 0 1em navy,
+    0 0 0.5em navy;
+  color: white;
 }
-
 h2 {
-	border: solid 1px black;
-	margin: 5px;
+    color:#3f3faf ;
+    margin: 5px;
+    font-family:cursive;
+    color:#3f3faf;
+    background:linear-gradient(.25turn, white, 50%, #ffefaf);
+
 }
 
 div#zentai {
-	display: flex;
-	flex-direction: row;
-	width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 10px;
+    width: 1024px;
 }
 
-div#zentai > div {
-	margin-left: 5px;
-	background-color: #ffefaf;
+div.box {
+    background: cyan;
 }
+
+
+div#zentai > div {
+    padding: 5px;
+    height:200px;
+    background-color: #ffefaf;
+}
+img{
+    float: right;
+}
+
