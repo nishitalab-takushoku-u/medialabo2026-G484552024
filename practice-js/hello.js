@@ -2,4 +2,4 @@ console.log('こんにちは');
 let x;
 x = 3;
 x = x+1;
-console.log(X);
+console.log(x);
