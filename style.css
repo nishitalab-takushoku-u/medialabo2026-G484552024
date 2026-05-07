@@ -15,3 +15,52 @@ body {
     padding: 40px 20px;
     font-family: sans-serif;
 }
+
+/* すべての要素を読みやすい幅に制限する */
+body > * {
+    width: 100%;
+    max-width: 700px; /* 1行が長くなりすぎない幅 */
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: left; /* 左揃えが一般的で読みやすい */
+    border-left: 10px solid #ffb340; /* 左側に太いライン */
+    padding: 10px 15px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* ほんのり影 */
+}
+
+h2 {
+    margin-top: 40px;
+    color: #444;
+    border-bottom: 2px solid #ffb340;
+}
+
+h3 {
+    margin-top: 25px;
+    padding-left: 10px;
+    border-left: 3px solid #ccc;
+}
+
+p {
+    line-height: 1.8;
+    color: #666;
+    margin-left: 5px;
+}
+
+/* 演習成果のリンクエリアを少し目立たせる */
+a {
+    display: inline-block;
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #d48806;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #ffb340;
+    color: white;
+}
