@@ -16,3 +16,7 @@ let gakka = [
 
 //////////////// ここから下にプログラムを書きたそう!
 
+for (let element of campus) {
+	console.log(element);
+}
+
