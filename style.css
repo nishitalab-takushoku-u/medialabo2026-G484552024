@@ -1,0 +1,17 @@
+/* ブラウザ独自の余白をリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* サイズ計算を楽にする魔法の1行 */
+}
+
+body {
+    /* フレックスボックスで全体を整える */
+    display: flex;
+    flex-direction: column; /* 上から下へ並べる */
+    align-items: center;    /* 左右中央に寄せる */
+    
+    background-color: #fdfdfd;
+    padding: 40px 20px;
+    font-family: sans-serif;
+}
