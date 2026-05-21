@@ -1,8 +1,9 @@
- b = document.querySelector('button#print');
- function greeting() {
+ function greeting2() {
     let i = document.querySelector('input[name="shimei"]');
-    i.getAttribute('name');
-   
-    console.log('こんにちは'+i.value+'さん');
-  }
-  b.addEventListener('click', greeting);
+    let shimei = i.value;
+    let aisatu = 'こんにちは, '+ shimei + 'さん.';
+  let p = document.querySelector('p#message');
+  p.textContent = aisatu;
+ }
+ let b = document.querySelector('button#print');
+ b.addEventListener('click',greeting2);
