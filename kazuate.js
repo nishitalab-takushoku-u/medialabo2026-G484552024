@@ -1,30 +1,73 @@
-// 課題4-1: 数当てゲーム
+let kotae = Math.floor(Math.random()*10)+1;
+console.log("答(デバッグ用 : " + kotae);
 
-// 乱数を使って正解を作る
-let kotae = Math.floor(Math.random()*10) + 1;
-console.log('答え（デバッグ用）: ' + kotae);
-
-// 入力回数（予想回数）
 let kaisu = 0;
 
-// そのほか，必要に応じて変数を宣言してもよい
 
-// ボタンを押した後の処理をする関数 hantei() の定義
+
 function hantei() {
-  // ここから: 予想回数を1増やして，span#kaisu 要素のテキストを更新
+    let g = document.querySelector('input[name="yosou"]');
 
-  // ここまで: 予想回数を1増やして，span#kaisu 要素のテキストを更新
-  
-  // ここから: テキストボックスに指定された数値を yoso に代入する
-  let yoso;
-  // ここまで: テキストボックスに指定された数値を yoso に代入する
-  
-  // ここから: 正解判定する
-  // 　　　　  正解/不正解のときのメッセージを表示する
+    let yoso = Number(g.value);
+    kaisu = kaisu +1;
+    let c = document.querySelector('span#kaisu');
+    let q = document.querySelector('span#answer');
+    q.textContent = g.value;
+    c.textContent = kaisu;
+    console.log(kaisu+"回目の予想:"+yoso);
+    let kekka;
+    if(kaisu >= 4){
+        console.log("答えは"+kotae+"でした。 すでにゲームは終わっています.");
+        let f = document.querySelector('p#result');
+        f.textContent = "答えは"+kotae+"でした。 すでにゲームは終わっています." 
 
-  // ここまで: 正解判定する
+    }
+else if(kaisu ===3){
+        if(yoso === kotae){
+            console.log("正解です。おめでとう！");
+            let f = document.querySelector('p#result');
+            f.textContent = "正解です。おめでとう！" 
+        }
+
+        else{
+            console.log("まちがい、残念でした答えは"+kotae+"です。");
+            let f = document.querySelector('p#result');
+            f.textContent = "まちがい、残念でした答えは"+kotae+"です。" 
+
+        }
+    }
+    else if (kaisu<=2){
+        if(yoso === kotae){
+            console.log("正解です。おめでとう！");
+            kaisu = 4;
+            let f = document.querySelector('p#result');
+            f.textContent = "正解です。おめでとう！";
+
+
+        }
+        else if (kotae > yoso){
+            console.log("まちがい、答えはもっと大きいですよ");
+            let f = document.querySelector('p#result');
+            f.textContent = "まちがい、答えはもっと大きいですよ";
+
+
+
+
+        }
+        else{
+            console.log("まちがい、答えはもっと小さいですよ");
+            let f = document.querySelector('p#result');
+            f.textContent = "まちがい、答えはもっと小さいですよ";
+
+
+        }
+
+
+
+
+
+    }
+
+
 }
 
-// ここから: ボタンを押した時のイベントハンドラとして hantei を登録
-
-// ここまで: ボタンを押した時のイベントハンドラとして hantei を登録
