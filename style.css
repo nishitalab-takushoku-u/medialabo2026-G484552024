@@ -1,1 +1,48 @@
+body {
+    line-height: 1.6;
+    font-family: sans-serif;
+    color: #333;
+    margin: 20px;
+}
 
+h1 {
+    color: white;
+    text-shadow: 2px 2px 5px navy;
+    background-color: #74992e;
+    padding: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-family: cursive;
+    color: #3f3faf;
+    background: linear-gradient(.25turn, white, #ffefaf);
+    border-bottom: solid 2px #3f3faf;
+    padding: 5px;
+}
+
+h3 {
+    color: navy;
+    font-size: 1.2em;
+    border-left: solid 8px #74992e;
+    border-bottom: solid 1px #74992e;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: rebeccapurple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+p {
+    padding: 5px 10px 5px 10px;
+}

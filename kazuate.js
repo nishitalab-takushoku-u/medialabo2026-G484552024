@@ -16,13 +16,16 @@ function hantei() {
     c.textContent = kaisu;
     console.log(kaisu+"回目の予想:"+yoso);
     let kekka;
+    
     if(kaisu >= 4){
         console.log("答えは"+kotae+"でした。 すでにゲームは終わっています.");
         let f = document.querySelector('p#result');
         f.textContent = "答えは"+kotae+"でした。 すでにゲームは終わっています." 
 
     }
-else if(kaisu ===3){
+
+    else if(kaisu ===3){
+
         if(yoso === kotae){
             console.log("正解です。おめでとう！");
             let f = document.querySelector('p#result');
@@ -36,6 +39,7 @@ else if(kaisu ===3){
 
         }
     }
+    
     else if (kaisu<=2){
         if(yoso === kotae){
             console.log("正解です。おめでとう！");
@@ -71,3 +75,7 @@ else if(kaisu ===3){
 
 }
 
+
+
+let b = document.querySelector('button#kai');
+ b.addEventListener('click', hantei);
